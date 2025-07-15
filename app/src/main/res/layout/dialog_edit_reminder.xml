@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editReminderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reminder title"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/editReminderDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Description (optional)"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:minLines="2"
+        android:padding="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editSelectDateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="Date"
+            android:textColor="@color/Blue"
+            app:strokeColor="@color/Blue"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editSelectTimeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="Time"
+            android:textColor="@color/Blue"
+            app:strokeColor="@color/Blue"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/editReminderPriority"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

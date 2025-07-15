@@ -58,11 +58,12 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/statusText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="sans-serif"
-                        android:text="Track time for your activities"
+                        android:text="Ready to start"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
 
@@ -187,7 +188,7 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Control Buttons Section -->
+        <!-- Control Buttons Section with Stop Button -->
         <LinearLayout
             android:id="@+id/controlButtonsSection"
             android:layout_width="match_parent"
@@ -205,13 +206,13 @@
                 android:id="@+id/resetButton"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/lightGray"
                 android:fontFamily="sans-serif-medium"
                 android:text="Reset"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:cornerRadius="16dp"
                 app:icon="@drawable/baseline_refresh_24"
                 app:iconTint="@color/black" />
@@ -220,15 +221,32 @@
                 android:id="@+id/startStopButton"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/Blue"
                 android:fontFamily="sans-serif-medium"
                 android:text="Start"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:cornerRadius="16dp"
                 app:icon="@drawable/baseline_play_arrow_24"
+                app:iconTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stopButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:fontFamily="sans-serif-medium"
+                android:text="Stop"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:enabled="false"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/baseline_stop_24"
                 app:iconTint="@color/white" />
 
         </LinearLayout>
@@ -271,6 +289,7 @@
                     android:text="Lap"
                     android:textColor="@color/white"
                     android:textSize="14sp"
+                    android:enabled="false"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/baseline_flag_24"
                     app:iconTint="@color/white" />
